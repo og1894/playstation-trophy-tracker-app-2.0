@@ -1,0 +1,38 @@
+{{!
+File: start.hbs
+Description: This is the Handlebars template for the home page of the PlayStation Trophy Tracker App. It extends the main layout and includes a navigation menu partial. The template welcomes users to the app, provides a brief description of its features, and displays a list of console generations (PS3, PS4, PS5) with images and links to their respective trophy collection pages. The data for the consoles is passed in through the "consoles" context variable.
+}}
+
+{{> menu}}
+
+<section class="ui center aligned middle aligned segment">
+  
+  <h2>Welcome to the PlayStation Trophy Tracker App!</h2>
+
+  <p>
+    This fan-made app allows you to track your PlayStation 
+    trophies and see how you stack up against your 
+    friends. You can view your trophy collection, 
+    compare it with others, and even see detailed 
+    information about each trophy (for now only
+    viewing games and their trophies is possible). Whether you're a 
+    casual gamer or a trophy hunter, this app is 
+    designed to enhance your gaming experience and 
+    help you achieve your trophy goals. 
+    Start tracking your trophies today by 
+    pressing on one of the console generations below!
+  </p>
+</section>
+
+<div class="ui centered cards">
+  {{#each consoles}}
+  <div class="card">
+    <div class="image">
+      <img class="image" src="{{image}}" alt="{{name}}">
+    </div>
+    <div class="content">
+      <a class="header" href="/{{linkname}}">{{name}}</a>
+    </div>
+  </div>
+  {{/each}}
+</div>

@@ -1,0 +1,31 @@
+{{!
+File: about.hbs
+Description: This is the Handlebars template for the "About Us" page of the PlayStation Trophy Tracker App. It extends the main layout and includes a navigation menu partial. The template displays information about the authors, including their names, taglines, bios, contact information, and a location map image. The data for the authors is passed in through the "aboutInfo" context variable.
+}}
+
+{{> menu id="about"}}
+
+<section class="ui center aligned middle aligned segment">
+    <h2>About the Authors</h2>
+</section>
+
+{{#each aboutInfo}}
+<section class="about-container">
+    <article class="profile-card">
+        <img class="location-img" src="{{locationMap}}" alt="Our Location" />
+
+        <div class="profile-info">
+            <h3>{{fullname}}</h3>
+            <p class="tagline">{{tagline}}</p>
+
+            <p class="bio">{{description}}</p>
+
+            <ul class="contact-list">
+                <li><strong>Email: </strong><a href="mailto:trinitygamers@gmail.com">{{contact.email}}</a></li>
+                <li><strong>Phone: </strong>{{contact.phone}}</li>
+                <li><strong>Location: </strong>{{contact.location}}</li>
+            </ul>
+        </div>
+    </article>
+</section>
+{{/each}}

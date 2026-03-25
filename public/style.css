@@ -1,0 +1,108 @@
+/*
+General styles for the web app
+*/
+
+html {
+  border: 90%;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 2em;
+  background-image: url('/astro-bot.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #d39c75;
+}
+
+h2, p{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ui.header.item a:hover{
+  text-decoration: underline;
+}
+
+/*
+About page styles for the author profile section, which includes the profile picture, name, tagline, bio, and contact information.
+*/
+
+.about-container {
+  max-width: 980px;
+  margin: 1.5rem auto;
+  background: rgba(255,255,255);
+  padding: 1.25rem;
+  border-radius: 8px;
+}
+
+.profile-card {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1rem 0;
+}
+
+.location-img {
+  width: 320px;
+  max-width: 40%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-info h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.3rem;
+}
+
+.tagline {
+  color: #666;
+  margin: 0 0 0.75rem 0;
+}
+
+.bio {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.75rem 0;
+}
+
+.contact-list li {
+  margin: 0.35rem 0;
+}
+
+.contact-list a {
+  color: #0a66c2;
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 720px) {
+  .profile-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .location-img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
