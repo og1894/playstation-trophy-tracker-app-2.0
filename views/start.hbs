@@ -1,8 +1,3 @@
-{{!
-File: start.hbs
-Description: This is the Handlebars template for the home page of the PlayStation Trophy Tracker App. It extends the main layout and includes a navigation menu partial. The template welcomes users to the app, provides a brief description of its features, and displays a list of console generations (PS3, PS4, PS5) with images and links to their respective trophy collection pages. The data for the consoles is passed in through the "consoles" context variable.
-}}
-
 {{> menu}}
 
 <section class="ui center aligned middle aligned segment">
@@ -22,63 +17,3 @@ Description: This is the Handlebars template for the home page of the PlayStatio
     Start tracking your trophies today by 
     pressing on one of the console generations below!
   </p>
-
-  <div class="ui five statistics" style="margin-top: 1em;">
-    <div class="ui five statistics" style="margin-top: 1em;">
-    
-    {{#with info}}
-     
-    <div class="statistic">
-      <div class="value">
-        <i class="music icon"></i> 
-      </div>
-      <div class="label">
-        App Title: <br>
-        {{appTitle}}
-      </div>
-    </div>
-    
-    <div class="statistic">
-      <div class="value">
-        <i class="code branch icon"></i> 
-      </div>
-      <div class="label">
-        App Version: <br>
-        Version {{version}}
-      </div>
-    </div> 
-     
-    <div class="statistic">
-      <div class="value">
-        <i class="map pin icon"></i> 
-      </div>
-      <div class="label">
-        Made in: <br>
-        {{location}}
-      </div>
-    </div> 
-	
-    <div class="statistic">
-      <div class="value">
-        <i class="user icon"></i> 
-      </div>
-      <div class="label">
-        Created by: <br>
-        {{creators.0.name}}
-      </div>
-    </div>
-	
-    <div class="statistic">
-      <div class="value">
-        <i class="user plus icon"></i> 
-      </div>
-      <div class="label">
-        With help from: <br>
-        {{creators.1.name}}
-      </div>
-    </div>
-    
-    {{/with}}
-  
-  </div> 
-</section>
