@@ -1,14 +1,9 @@
-{{!
-File: menu.hbs
-Description: This is a Handlebars partial template for the navigation menu of the PlayStation Trophy Tracker App. It defines a responsive menu using Fomantic UI classes, with a header linking to the home page and a right-aligned menu item linking to the "About Us" page.}}
-
 <nav class="ui stackable menu">
-  <header class="ui header item"> 
-    <a href="/">PlayStation Trophy Tracker App</a>
-  </header>
-  
+  <header class="ui header item"> <a href="/">Playstation Trophy Tracker App</a></header>
   <div class="right menu">
-    <a href="/about" class="item">About Us</a>
+    <a id="dashboard" class="item" href="/dashboard">Dashboard</a>
+    <a id="about" class="item" href="/about">About</a>
+    <a id="stats" class="item" href="/stats">Statistics</a>
   </div>
 </nav>
 

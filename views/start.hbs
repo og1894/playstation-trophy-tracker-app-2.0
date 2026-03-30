@@ -22,17 +22,63 @@ Description: This is the Handlebars template for the home page of the PlayStatio
     Start tracking your trophies today by 
     pressing on one of the console generations below!
   </p>
-</section>
 
-<div class="ui centered cards">
-  {{#each consoles}}
-  <div class="card">
-    <div class="image">
-      <img class="image" src="{{image}}" alt="{{name}}">
+  <div class="ui five statistics" style="margin-top: 1em;">
+    <div class="ui five statistics" style="margin-top: 1em;">
+    
+    {{#with info}}
+     
+    <div class="statistic">
+      <div class="value">
+        <i class="music icon"></i> 
+      </div>
+      <div class="label">
+        App Title: <br>
+        {{appTitle}}
+      </div>
     </div>
-    <div class="content">
-      <a class="header" href="/{{linkname}}">{{name}}</a>
+    
+    <div class="statistic">
+      <div class="value">
+        <i class="code branch icon"></i> 
+      </div>
+      <div class="label">
+        App Version: <br>
+        Version {{version}}
+      </div>
+    </div> 
+     
+    <div class="statistic">
+      <div class="value">
+        <i class="map pin icon"></i> 
+      </div>
+      <div class="label">
+        Made in: <br>
+        {{location}}
+      </div>
+    </div> 
+	
+    <div class="statistic">
+      <div class="value">
+        <i class="user icon"></i> 
+      </div>
+      <div class="label">
+        Created by: <br>
+        {{creators.0.name}}
+      </div>
     </div>
-  </div>
-  {{/each}}
-</div>
+	
+    <div class="statistic">
+      <div class="value">
+        <i class="user plus icon"></i> 
+      </div>
+      <div class="label">
+        With help from: <br>
+        {{creators.1.name}}
+      </div>
+    </div>
+    
+    {{/with}}
+  
+  </div> 
+</section>

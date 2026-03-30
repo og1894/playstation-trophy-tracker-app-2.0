@@ -1,4 +1,4 @@
-{{> menu id="about"}}
+{{> menu id="stats"}}
 
 <section class="ui center aligned middle aligned segment">
 
@@ -81,28 +81,3 @@
   {{/with}}
 
 </section>
-
-<section class="ui center aligned middle aligned segment">
-    <h2>About the Authors</h2>
-</section>
-
-{{#each aboutInfo}}
-<section class="about-container">
-    <article class="profile-card">
-        <img class="location-img" src="{{locationMap}}" alt="Our Location" />
-
-        <div class="profile-info">
-            <h3>{{fullname}}</h3>
-            <p class="tagline">{{tagline}}</p>
-
-            <p class="bio">{{description}}</p>
-
-            <ul class="contact-list">
-                <li><strong>Email: </strong><a href="mailto:trinitygamers@gmail.com">{{contact.email}}</a></li>
-                <li><strong>Phone: </strong>{{contact.phone}}</li>
-                <li><strong>Location: </strong>{{contact.location}}</li>
-            </ul>
-        </div>
-    </article>
-</section>
-{{/each}}
