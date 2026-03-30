@@ -1,0 +1,135 @@
+{
+  "gamesCollection" : [
+    {
+      "id": "03",
+      "name":"ps3 games",
+      "games":[
+        {
+          "name":"The Last of Us",
+          "image": "/tlou.jpg",
+          "platform":"PS3",
+          "trophies":{
+            "bronze": 15,
+            "silver": 8,
+            "gold": 3,
+            "platinum": 1
+          }
+        },
+        {
+          "name":"Ratchet and Clank",
+          "image": "/ratchet.jpg",
+          "platform":"PS3",
+          "trophies":{
+            "bronze": 12,
+            "silver": 6,
+            "gold": 4,
+            "platinum": 1
+          }
+        }
+      ] 
+    },
+    {
+      "id": "04",
+      "name":"ps4 games",
+      "games":[
+        {
+          "name":"The Last of Us Part 2",
+          "image": "/tlou2.png",
+          "platform":"PS4",
+          "trophies":{
+            "bronze": 10,
+            "silver": 5,
+            "gold": 2,
+            "platinum": 1}
+        },
+        {
+            "name":"Need for Speed Heat",
+            "image": "/nfs.jpg",
+            "platform":"PS4",
+            "trophies":{
+                "bronze": 15,
+                "silver": 8,
+                "gold": 3,
+                "platinum": 1}
+        },
+        {
+            "name":"Shadow of the Tomb Raider",
+            "image": "/tomb raider.jpg",
+            "platform":"PS4",
+            "trophies":{
+              "bronze": 12,
+              "silver": 6,
+              "gold": 4,
+              "platinum": 1}
+        },
+        {
+            "name": "Fallout 4",
+            "image": "/fallout4.jpg",
+            "platform":"PS4",
+            "trophies":{
+              "bronze": 33,
+              "silver": 12,
+              "gold": 6,
+              "platinum": 1}
+        },
+        {
+            "name": "Cyberpunk 2077",
+            "image": "/cp77.jpg",
+            "platform":"PS4",
+            "trophies":{
+              "bronze": 20,
+              "silver": 10,
+              "gold": 5,
+              "platinum": 1}
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "name":"ps5 games",
+      "games":[
+        {
+            "name":"Gran Turismo 7",
+            "image": "/gt7.jpg",
+            "platform":"PS5",
+            "trophies":{
+                "bronze": 10,
+                "silver": 5,
+                "gold": 2,
+                "platinum": 1}
+        },
+        {
+            "name":"Horizon Forbidden West",
+            "image": "/horizon.jpg",
+            "platform":"PS5",
+            "trophies":{
+                "bronze": 15,
+                "silver": 8,
+                "gold": 3,
+                "platinum": 1}
+        },
+        {
+           "name":"Spider Man Miles Morales",
+            "image": "/spiderman mm.jpg",
+            "platform":"PS5",
+            "trophies":{
+              "bronze": 12,
+              "silver": 6,
+              "gold": 4,
+              "platinum": 1}
+        },
+        {
+            "name": "Ghost of Yotei",
+            "image": "/ghost.jpg",
+            "platform":"PS5",
+            "trophies":{
+              "bronze": 23,
+              "silver": 9,
+              "gold": 4,
+              "platinum": 1}
+        }
+      ]
+    }
+ ]
+}
+

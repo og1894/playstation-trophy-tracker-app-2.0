@@ -12,12 +12,16 @@ const router = express.Router();
 
 import start from './controllers/start.js';
 import about from './controllers/about.js';
+import collection from './controllers/collection.js';
+
 import gamesPS3 from './controllers/gamesPS3.js';
 import gamesPS4 from './controllers/gamesPS4.js';
 import gamesPS5 from './controllers/gamesPS5.js';
 
 router.get('/', start.createView);
 router.get('/about', about.createView);
+router.get('/collection/:id', collection.createView);
+
 router.get('/collectionsPS3', gamesPS3.createView);
 router.get('/collectionsPS4', gamesPS4.createView);
 router.get('/collectionsPS5', gamesPS5.createView);
