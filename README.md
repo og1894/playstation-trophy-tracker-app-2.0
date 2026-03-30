@@ -4,16 +4,3 @@ pages. The JSON and view code structure is straightforward and adaptive, allowin
 authors at any time, and the code will display them correctly with the use of handlebars helpers. Further functionality might be added with 
 assignments that require additional functions.
 hehe
-
-<div class="ui centered cards">
-  {{#each consoles}}
-  <div class="card">
-    <div class="image">
-      <img class="image" src="{{image}}" alt="{{name}}">
-    </div>
-    <div class="content">
-      <a class="header" href="/{{linkname}}">{{name}}</a>
-    </div>
-  </div>
-  {{/each}}
-</div>

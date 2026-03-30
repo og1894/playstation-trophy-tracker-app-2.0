@@ -1,3 +1,8 @@
+/* 
+File: controllers/gamesPS3.js
+Description: Controller for the PS3 Games page of the PlayStation Trophy Tracker App.
+*/
+
 'use strict';
 
 import logger from "../utils/logger.js";        // Importing the logger utility for logging information and debugging purposes.                  
