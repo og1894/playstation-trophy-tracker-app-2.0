@@ -6,9 +6,16 @@
       "date": "2026-03-30T17:12:32.748Z",
       "games": [
         {
-          "id": "6672e1ac-b358-4ea4-9074-a2f92ddd9caa",
-          "title": "cyberpunk 2077",
-          "artist": "2069"
+          "id": "1dead669-44f3-471f-9350-265ea2ff8c44",
+          "title": "hh",
+          "platform": "ps4",
+          "trophies": "5"
+        },
+        {
+          "id": "ce41aff1-d193-4b63-a28e-5de6e3c3ddb6",
+          "title": "gay",
+          "platform": "ps16",
+          "trophies": "77"
         }
       ]
     }

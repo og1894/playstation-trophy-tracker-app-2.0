@@ -24,7 +24,8 @@ const collection = {
     const newGame = {
       id: uuidv4(),
       title: request.body.title,
-      artist: request.body.artist,
+      platform: request.body.platform,
+      trophies: request.body.trophies,
     };
 
     collectionStore.addGame(collectionId, newGame);
@@ -46,7 +47,8 @@ const collection = {
     const updatedGame = {
       id: gameId,
       title: request.body.title,
-      artist: request.body.artist
+      platform: request.body.platform,
+      trophies: request.body.trophies,
     };
 
     collectionStore.editGame(collectionId, gameId, updatedGame);

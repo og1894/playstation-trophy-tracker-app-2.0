@@ -54,7 +54,7 @@ const dashboard = {
     const newCollection = {
       id: uuidv4(),
       title: request.body.title,
-	  date: timestamp,
+	    date: timestamp,
       games: []
     };
     

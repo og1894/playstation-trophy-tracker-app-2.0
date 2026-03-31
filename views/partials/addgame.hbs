@@ -1,15 +1,21 @@
 <form class="ui stacked segment form" action="/collection/{{id}}/addgame" method="POST">
   
-  <div class="two fields">
+  <div class="three fields">
     <div class="field">
-      <label>Title</label>
+      <label>Game Title</label>
       <input type="text" name="title" autofocus required title = "Please include a valid Title"
 	    placeholder="Title">
     </div>
 
     <div class="field">
+      <label>Platform</label>
+      <input type="text" name="platform" required title = "Please include a valid Platform"
+	    placeholder="Platform"  >
+    </div>
+
+    <div class="field">
       <label>Number of Trophies</label>
-      <input type="text" name="artist" required title = "Please include a valid Artist"
+      <input type="number" name="trophies" required title = "Please include a valid number of trophies"
 	    placeholder="Number of Trophies"  >
     </div>
   </div>

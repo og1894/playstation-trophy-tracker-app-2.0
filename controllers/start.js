@@ -1,25 +1,40 @@
-/*
-File: controllers/start.js
-Description: Controller for the Start page of the PlayStation Trophy Tracker App.
-*/
-
 'use strict';   
 
-import logger from "../utils/logger.js";    // Importing the logger utility for logging information and debugging purposes.
-import appStore from "../models/app-store.js";    // Importing the appStore model to access the general information about the PlayStation Trophy Tracker App.   
+import logger from "../utils/logger.js";   
+import appStore from "../models/app-store.js";    
+import collectionStore from "../models/collection-store.js"; 
 
-const start = {     // Defining the start controller object that will contain methods related to the Start page.
+const start = {
   createView(request, response) {
     logger.info("Start page loading!");
+
+    const collections = collectionStore.getAllCollections();
+    const numCollections = collections.length;
+    const numGames = collections.reduce((total, collection) => total + collection.games.length, 0);
+    const average = numCollections > 0 ? numGames / numCollections : 0;
+    const totalRating = collections.reduce((total, collection) => total + parseInt(collection.rating || 0), 0);
+    const avgRating = numCollections > 0 ? totalRating / numCollections : 0;
+    const maxRating = numCollections > 0 ? Math.max(...collections.map(collection => parseInt(collection.rating || 0))) : 0;
+    const maxRated = collections.filter(collection => parseInt(collection.rating || 0) === maxRating);
+    const favTitles = maxRated.map(item => item.title);
+
+    const statistics = {
+      displayNumCollections: numCollections,
+      displayNumGames: numGames,
+      displayAverage: average.toFixed(2),
+      displayAvgRating: avgRating.toFixed(2),
+      highest: maxRating,
+      displayFav: favTitles,
+    };
     
     const viewData = {
       title: "PlayStation Trophy Tracker App",
       info: appStore.getAppInfo(),
-      //consoles: consoleStore.getConsolesInfo()
+      stats: statistics,
     };
-    logger.info(viewData.consoles);
+
     response.render('start', viewData);   
   },
 };
 
-export default start;       // Exporting the start controller to be used in other parts of the application, such as routing.
+export default start;

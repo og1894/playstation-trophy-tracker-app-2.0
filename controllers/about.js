@@ -1,14 +1,9 @@
-/* 
-File: controllers/about.js
-Description: Controller for the About page of the PlayStation Trophy Tracker App.
-*/
-
 'use strict';
 
-import logger from "../utils/logger.js";        // Importing the logger utility for logging information and debugging purposes.
-import aboutStore from "../models/about-store.js";   // Importing the aboutStore model to access the information for the About page.
+import logger from "../utils/logger.js"; 
+import aboutStore from "../models/about-store.js";
 
-const about = {        // Defining the about controller object that will contain methods related to the About page.
+const about = {
   createView(request, response) {
     logger.info("About page loading!");
     
@@ -22,4 +17,4 @@ const about = {        // Defining the about controller object that will contain
   },
 };
 
-export default about;   // Exporting the about controller to be used in other parts of the application, such as routing.
+export default about;
