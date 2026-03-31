@@ -211,3 +211,9 @@ assignments that require additional functions.
     const maxRating = numCollections > 0 ? Math.max(...collections.map(collection => parseInt(collection.rating || 0))) : 0;
     const maxRated = collections.filter(collection => parseInt(collection.rating || 0) === maxRating);
     const favTitles = maxRated.map(item => item.title);
+
+    {{#if rating}}
+      <div class="extra content">
+        <div class="ui yellow disabled rating" data-icon="star" data-rating="{{rating}}" data-max-rating="5"></div>
+      </div>
+    {{/if}}

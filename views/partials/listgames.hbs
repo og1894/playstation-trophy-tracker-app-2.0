@@ -1,37 +1,23 @@
 {{#if games}}
-
-  <table class="ui unstackable striped table">
-    <thead>
-      <tr>
-        <th class="four wide">Game</th>
-        <th class="four wide">Platform</th>
-        <th class="four wide">Number of Trophies</th>
-        <th class="two wide"> </th>
-        <th class="two wide"> </th>
-      </tr>
-    </thead>
-    <tbody>
-      
-      {{#each games}}
-      
+  <div class="ui four stackable cards">
+    {{#each games}}
+      <div class="ui card">
         {{> listOneGame collectionId=../id}}
         {{> editgame collectionId=../id}}
 
         <script>
-            document.querySelector("#showEdit{{@index}}").addEventListener ('click', () => {
-            document.querySelector("#game{{@index}}").style.display = "none";
-            document.querySelector("#edit{{@index}}").style.display = "table-row";
-          })
-            document.querySelector("#hideEdit{{@index}}").addEventListener ('click', () => {
-            document.querySelector("#game{{@index}}").style.display = "table-row";
-            document.querySelector("#edit{{@index}}").style.display = "none";
-          })
+            document.querySelector("#showEdit{{@index}}").addEventListener('click', () => {
+              document.querySelector("#game{{@index}}").style.display = "none";
+              document.querySelector("#edit{{@index}}").style.display = "block";
+            })
+            document.querySelector("#hideEdit{{@index}}").addEventListener('click', () => {
+              document.querySelector("#game{{@index}}").style.display = "block";
+              document.querySelector("#edit{{@index}}").style.display = "none";
+            })
         </script>
-                
-      {{/each}}
-    
-    </tbody>
-  </table>
+      </div>
+    {{/each}}
+  </div>
 
 {{else}}
   <h3 class="ui message">

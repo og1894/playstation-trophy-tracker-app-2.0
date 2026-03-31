@@ -1,5 +1,4 @@
 <section class="ui left aligned middle aligned segment">
-
   <section class="dashboard-header">
 
     <h2 class="title">Trophy Tracker App Dashboard</h2>
@@ -29,7 +28,9 @@
     </div>
     
   </section>
+</section>
 
+<section class="ui segment">
   {{#unless search}}
     {{#unless collections}}
       <h3 class="ui message">
@@ -38,38 +39,38 @@
     {{/unless}}
   {{/unless}}
 
-  {{#each collections}}
-    <section class="ui left aligned middle aligned segment">
+  {{#if collections}}
+    <div class="ui three stackable cards">
+      {{#each collections}}
+        <div class="ui card">
+          <div class="content">
+            <div class="header">{{uppercase title}}</div>
+            <div class="meta">
+              {{#if date}}
+                Created {{formatDate date}}
+              {{/if}}
+            </div>
+            <div class="description">
+              {{#if games}}
+                <p><strong>Total games:</strong> {{games.length}}</p>
+              {{else}}
+                <p>Empty collection!</p>
+              {{/if}}
+            </div>
+          </div>
 
-      <h3 class="ui header">
-        {{uppercase title}}
-      </h3>
-
-      <p>
-        <i class="gamepad icon"></i>
-        {{#if games}}
-          Total games:
-          {{games.length}}
-
-        {{else}}
-          Empty collection!
-        {{/if}}
-
-        {{#if date}}
-          <br />
-          <i class="calendar alternate outline icon"></i>
-          Created on
-          <i>{{formatDate date}}</i>
-        {{/if}}
-      </p>
-
-      <a href="/collection/{{id}}"><i class="ui open folder black icon"></i></a>
-
-	    <a href="/dashboard/deletecollection/{{id}}">
-        <i class="ui trash black icon"></i>
-      </a>
-    </section>
-    
-  {{/each}}
-
+          <div class="extra content">
+            <div class="ui two buttons">
+              <a href="/collection/{{id}}" class="ui green button">
+                <i class="folder open icon"></i> Open
+              </a>
+              <a href="/dashboard/deletecollection/{{id}}" class="ui red button">
+                <i class="trash icon"></i> Delete
+              </a>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  {{/if}}
 </section>

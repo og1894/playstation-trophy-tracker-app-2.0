@@ -1,26 +1,17 @@
-<tr id="game{{@index}}">
-  <td>
-    {{title}}
-  </td>
-
-  <td>
-    {{platform}}
-  </td>
-
-  <td>
-    {{trophies}}
-  </td>
-
-  <td class="center aligned">
-    <button title="Edit Game" class = "editSubmit" id="showEdit{{@index}}">
-      <i class="ui edit icon"></i>
+<div class="content" id="game{{@index}}">
+  <div class="header">{{title}}</div>
+  <div class="meta">{{platform}}</div>
+  <div class="description">
+    <p><strong>Trophies:</strong> {{trophies}}</p>
+  </div>
+</div>
+<div class="extra content">
+  <div class="ui two buttons">
+    <button type="button" title="Edit Game" class="ui basic blue button" id="showEdit{{@index}}">
+      <i class="ui edit icon"></i> Edit
     </button>
-  </td>
-
-  <td class="center aligned">
-    <a href="/collection/{{collectionId}}/deletegame/{{id}}" 
-	   title="Delete Game">
-     <i class="ui black trash icon"></i>
+    <a href="/collection/{{collectionId}}/deletegame/{{id}}" class="ui basic red button" title="Delete Game">
+      <i class="ui trash icon"></i> Delete
     </a>
-  </td>
-</tr>
+  </div>
+</div>
