@@ -25,8 +25,10 @@ const dashboard = {
           return a.title.localeCompare(b.title) * order;
         }
 
-        if (sortField === "rating") {
-          return (a.rating - b.rating) * order;
+        if (sortField === "games") {
+          const aCount = Array.isArray(a.games) ? a.games.length : 0;
+          const bCount = Array.isArray(b.games) ? b.games.length : 0;
+          return (aCount - bCount) * order;
         }
 
         return 0;
@@ -38,7 +40,7 @@ const dashboard = {
       collections: sortField ? sorted : collections,
       search: searchTerm,
       titleSelected: request.query.sort === "title",
-      ratingSelected: request.query.sort === "rating",
+      gamesSelected: request.query.sort === "games",
       ascSelected: request.query.order === "asc",
       descSelected: request.query.order === "desc",
     };
