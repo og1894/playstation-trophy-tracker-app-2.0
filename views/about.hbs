@@ -1,26 +1,34 @@
 {{> menu id="about"}}
 
-<section class="ui center aligned middle aligned segment">
+<section class="ui left aligned middle aligned segment">
+    <h2>User Statistics</h2>
+</section>
+
+
+<section class="ui middle aligned segment">
     <h2>About the Authors</h2>
+
+  <section class="ui left aligned segment">
+    
+    {{#each aboutInfo}}
+    <section class="about-container">
+        <article class="profile-card">
+            <img class="location-img" src="{{locationMap}}" alt="Our Location" />
+
+            <div class="profile-info">
+                <h3>{{fullname}}</h3>
+                <p class="tagline">{{tagline}}</p>
+
+                <p class="bio">{{description}}</p>
+
+                <ul class="contact-list">
+                    <li><strong>Email: </strong><a href="mailto:trinitygamers@gmail.com">{{contact.email}}</a></li>
+                    <li><strong>Phone: </strong>{{contact.phone}}</li>
+                    <li><strong>Location: </strong>{{contact.location}}</li>
+                </ul>
+            </div>
+        </article>
+    </section>
+    {{/each}}
+  </section>
 </section>
-
-{{#each aboutInfo}}
-<section class="about-container">
-    <article class="profile-card">
-        <img class="location-img" src="{{locationMap}}" alt="Our Location" />
-
-        <div class="profile-info">
-            <h3>{{fullname}}</h3>
-            <p class="tagline">{{tagline}}</p>
-
-            <p class="bio">{{description}}</p>
-
-            <ul class="contact-list">
-                <li><strong>Email: </strong><a href="mailto:trinitygamers@gmail.com">{{contact.email}}</a></li>
-                <li><strong>Phone: </strong>{{contact.phone}}</li>
-                <li><strong>Location: </strong>{{contact.location}}</li>
-            </ul>
-        </div>
-    </article>
-</section>
-{{/each}}

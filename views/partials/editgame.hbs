@@ -1,20 +1,21 @@
 <div class="content hide" id="edit{{@index}}">
   <form class="ui form" method="POST" action="/collection/{{collectionId}}/updategame/{{id}}">
-<div class="field">
+
+    <div class="field">
       <label>Title</label>
       <input type="text" name="title" autofocus required
         title="Please include a valid Title"
         placeholder="Title" value="{{title}}">
     </div>
 
-<div class="field">
+    <div class="field">
       <label>Platform</label>
       <input type="text" name="platform" required
         title="Please include a valid platform"
         placeholder="Platform" value="{{platform}}">
     </div>
 
-<div class="field">
+    <div class="field">
       <label>Trophies</label>
       <input type="number" name="trophies" required
         title="Please include a valid number of trophies"
@@ -26,10 +27,12 @@
         title="Exit without saving">
         <i class="ui undo icon"></i> Cancel
       </button>
+      
       <button type="submit" class="ui blue button"
         title="Save changes">
         <i class="ui save icon"></i> Save
       </button>
     </div>
+
   </form>
 </div>

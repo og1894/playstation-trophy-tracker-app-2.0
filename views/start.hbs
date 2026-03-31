@@ -35,10 +35,10 @@
 
     <div class="ui sixteen wide column">
 
-      <div class="ui centered three statistics">
+      <div class="ui centered four statistics">
         <div class="ui statistic">
           <div class="value">
-            <i class="sort amount up icon"></i>
+            <i class="database icon"></i>
           </div>
           <div class="label">
             {{displayNumCollections}} collections
@@ -54,14 +54,24 @@
           </div>
         </div>
 
+        <div class="ui yellow statistic">
+          <div class="value">
+            <i class="trophy icon"></i>
+          </div>
+          <div class="label">
+            {{displayNumTrophies}} trophies
+          </div>
+        </div>
+
         <div class="ui red statistic">
           <div class="value">
-            <i class="chartline icon"></i>
+            <i class="percentage icon"></i>
           </div>
           <div class="label">
             Average games per <br> collection: {{displayAverage}}
           </div>
         </div>
+
       </div>
     </div>
     

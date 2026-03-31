@@ -1,15 +1,72 @@
 {
   "gamesCollection": [
     {
-      "id": "37ba2548-2d48-456e-9c82-f6b4bcbdf389",
-      "title": "jjj",
-      "date": "2026-03-31T11:24:36.821Z",
+      "id": "2136bacd-70bd-4611-bbf7-16bb313b7391",
+      "title": "Adventure Games",
+      "date": "2026-03-31T12:07:01.178Z",
       "games": [
         {
-          "id": "472c2597-6f9f-4195-b66a-c204af708b49",
-          "title": "ghghg",
-          "platform": "uuu",
-          "trophies": "5"
+          "id": "9e5be540-5943-49aa-94ce-c587b9225f12",
+          "title": "Uncharted 4",
+          "platform": "PS4",
+          "trophies": "25"
+        },
+        {
+          "id": "2beafa85-940a-48d9-8726-3b7b51cafee2",
+          "title": "Astro Bot",
+          "platform": "PS5",
+          "trophies": "18"
+        },
+        {
+          "id": "398b1518-35bc-44c0-a901-518d3730f2ca",
+          "title": "Cyberpunk 2077",
+          "platform": "PS4",
+          "trophies": "31"
+        }
+      ]
+    },
+    {
+      "id": "c2fad044-651f-4b56-a11a-2fa94e0ad61b",
+      "title": "Simulators",
+      "date": "2026-03-31T12:07:10.125Z",
+      "games": [
+        {
+          "id": "f8e39724-dd01-4731-830a-85acc2d78140",
+          "title": "Farming Simulator 22",
+          "platform": "PS5",
+          "trophies": "30"
+        },
+        {
+          "id": "4818ef41-df69-4714-84ee-d4f2617fd347",
+          "title": "Gran Turismo 7",
+          "platform": "PS5",
+          "trophies": "42"
+        }
+      ]
+    },
+    {
+      "id": "825e0c54-6862-40cd-8490-dae3b5f1e353",
+      "title": "Shooting Games",
+      "date": "2026-03-31T12:07:39.071Z",
+      "games": [
+        {
+          "id": "3ffd86b6-8007-4f0e-84f7-8b34f6fbcbad",
+          "title": "Call of Duty Modern Warfare",
+          "platform": "PS4",
+          "trophies": "36"
+        }
+      ]
+    },
+    {
+      "id": "1b2a18e0-0ea2-4553-bc85-8a872eff7a6b",
+      "title": "Games Completed",
+      "date": "2026-03-31T12:10:53.547Z",
+      "games": [
+        {
+          "id": "570a76bd-2a17-41ac-b0a0-e58a24af8fe4",
+          "title": "Days Gone",
+          "platform": "PS4",
+          "trophies": "60"
         }
       ]
     }

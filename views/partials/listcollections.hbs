@@ -44,7 +44,7 @@
       {{#each collections}}
         <div class="ui card">
           <div class="content">
-            <div class="header">{{uppercase title}}</div>
+            <div class="header">{{title}}</div>
             <div class="meta">
               {{#if date}}
                 Created {{formatDate date}}
@@ -61,10 +61,10 @@
 
           <div class="extra content">
             <div class="ui two buttons">
-              <a href="/collection/{{id}}" class="ui green button">
+              <a href="/collection/{{id}}" class="ui basic green button">
                 <i class="folder open icon"></i> Open
               </a>
-              <a href="/dashboard/deletecollection/{{id}}" class="ui red button">
+              <a href="/dashboard/deletecollection/{{id}}" class="ui basic red button">
                 <i class="trash icon"></i> Delete
               </a>
             </div>
