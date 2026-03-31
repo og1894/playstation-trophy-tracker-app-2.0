@@ -26,7 +26,7 @@ const start = {
     };
     
     const viewData = {
-      title: "PlayStation Trophy Tracker App",
+      title: "PlayStation Game Tracker App",
       info: appStore.getAppInfo(),
       stats: statistics,
     };

@@ -1,8 +1,3 @@
-/*
-File: server.js
-Description: This is the main entry point of the PlayStation Trophy Tracker App. It sets up the Express server, configures middleware for serving static files and using Handlebars as the view engine, and defines the routes for the application by importing them from the routes.js file. Finally, it starts the server and listens on a specified port for incoming requests.
-*/
-
 'use strict';
 
 import express from 'express';

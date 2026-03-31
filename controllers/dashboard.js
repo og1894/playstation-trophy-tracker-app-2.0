@@ -36,7 +36,7 @@ const dashboard = {
     }
 
     const viewData = {
-      title: "Trophy Tracker App Dashboard",
+      title: "Game Tracker App Dashboard",
       collections: sortField ? sorted : collections,
       search: searchTerm,
       titleSelected: request.query.sort === "title",
