@@ -12,6 +12,8 @@
     "express"
   ],
   "dependencies": {
+    "body-parser": "^2.2.2",
+    "cookie-parser": "^1.4.7",
     "express": "^5.2.1",
     "express-handlebars": "^8.0.4",
     "lowdb": "^7.0.1",

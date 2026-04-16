@@ -3,16 +3,18 @@
 import logger from '../utils/logger.js';
 import collectionStore from '../models/collection-store.js';
 import { v4 as uuidv4 } from 'uuid';
-
+import accounts from './accounts.js';
 
 const collection = {
   createView(request, response) {
     const collectionId = request.params.id;
-    logger.debug(`Collection id = ${collectionId}`);
+    const loggedInUser = accounts.getCurrentUser(request);
+    logger.debug('Collection id = ' + collectionId);
     
     const viewData = {
       title: 'Collection',
-      singleCollection: collectionStore.getCollection(collectionId)
+      singleCollection: collectionStore.getCollection(collectionId),
+      fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
     };
 
     response.render('collection', viewData);

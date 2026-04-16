@@ -1,74 +1,46 @@
 {
   "gamesCollection": [
     {
-      "id": "2136bacd-70bd-4611-bbf7-16bb313b7391",
-      "title": "Adventure Games",
-      "date": "2026-03-31T12:07:01.178Z",
+      "userid": "73b86da3-ea15-4795-8c93-e6d03c60cb6b",
+      "id": "20c93f84-4402-4349-8916-bdc16b4cae15",
+      "title": "Adventure",
       "games": [
         {
-          "id": "9e5be540-5943-49aa-94ce-c587b9225f12",
+          "id": "8b109191-9564-4639-a573-52d2e3a098be",
           "title": "Uncharted 4",
           "platform": "PS4",
-          "trophies": "25"
-        },
-        {
-          "id": "2beafa85-940a-48d9-8726-3b7b51cafee2",
-          "title": "Astro Bot",
-          "platform": "PS5",
-          "trophies": "18"
-        },
-        {
-          "id": "398b1518-35bc-44c0-a901-518d3730f2ca",
-          "title": "Cyberpunk 2077",
-          "platform": "PS4",
-          "trophies": "31"
+          "trophies": "20"
         }
-      ]
+      ],
+      "date": "2026-04-16T11:38:57.803Z"
     },
     {
-      "id": "c2fad044-651f-4b56-a11a-2fa94e0ad61b",
+      "userid": "73b86da3-ea15-4795-8c93-e6d03c60cb6b",
+      "id": "2762cdcc-bddf-4c7f-b12f-a8749deffe07",
       "title": "Simulators",
-      "date": "2026-03-31T12:07:10.125Z",
       "games": [
         {
-          "id": "f8e39724-dd01-4731-830a-85acc2d78140",
+          "id": "51b30c41-888b-42cd-9fad-a607dc35c2b0",
           "title": "Farming Simulator 22",
           "platform": "PS5",
-          "trophies": "30"
-        },
-        {
-          "id": "4818ef41-df69-4714-84ee-d4f2617fd347",
-          "title": "Gran Turismo 7",
-          "platform": "PS5",
-          "trophies": "42"
+          "trophies": "13"
         }
-      ]
+      ],
+      "date": "2026-04-16T11:39:30.348Z"
     },
     {
-      "id": "825e0c54-6862-40cd-8490-dae3b5f1e353",
-      "title": "Shooting Games",
-      "date": "2026-03-31T12:07:39.071Z",
+      "userid": "73b86da3-ea15-4795-8c93-e6d03c60cb6b",
+      "id": "050b3c7e-5a09-466a-961d-f0a90e88e61e",
+      "title": "Action",
       "games": [
         {
-          "id": "3ffd86b6-8007-4f0e-84f7-8b34f6fbcbad",
-          "title": "Call of Duty Modern Warfare",
+          "id": "f820a9bb-7b1d-402a-9f41-1519b85cce43",
+          "title": "Call of Duty",
           "platform": "PS4",
-          "trophies": "36"
+          "trophies": "38"
         }
-      ]
-    },
-    {
-      "id": "1b2a18e0-0ea2-4553-bc85-8a872eff7a6b",
-      "title": "Games Completed",
-      "date": "2026-03-31T12:10:53.547Z",
-      "games": [
-        {
-          "id": "570a76bd-2a17-41ac-b0a0-e58a24af8fe4",
-          "title": "Days Gone",
-          "platform": "PS4",
-          "trophies": "60"
-        }
-      ]
+      ],
+      "date": "2026-04-16T11:40:54.891Z"
     }
   ]
 }

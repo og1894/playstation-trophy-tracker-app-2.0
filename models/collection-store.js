@@ -21,8 +21,8 @@ addGame(id, game) {
     this.store.addItem(this.collection, id, this.array, game);
 },
 
-addCollection(collection) {
-    this.store.addCollection(this.collection, collection);
+addCollectionItem(newCollection) {
+    this.store.addCollection(this.collection, newCollection);
 },
 
 removeGame(id, gameId) {
@@ -42,6 +42,16 @@ searchCollection(search) {
     return this.store.findBy(
       this.collection,
       (collection => collection.title.toLowerCase().includes(search.toLowerCase())))
+},
+
+getUserCollections(userid) {
+  return this.store.findBy(this.collection, (collection => collection.userid === userid));
+},
+
+searchUserCollections(search, userid) {
+  return this.store.findBy(
+    this.collection,
+    (collection => collection.userid === userid && collection.title.toLowerCase().includes(search.toLowerCase())))
 },
 };
 

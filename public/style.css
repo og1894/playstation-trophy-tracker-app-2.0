@@ -29,6 +29,14 @@ h2, p{
   text-decoration: underline;
 }
 
+.name{
+  padding-top:22.5px;
+  padding-right:5px;
+  line-height:20px;
+  font-weight:bold;
+  text-transform:capitalize;
+}
+
 /*
 About page styles for the author profile section, which includes the profile picture, name, tagline, bio, and contact information.
 */
