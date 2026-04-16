@@ -1,5 +1,80 @@
 {{> welcomemenu }}
 
 <section class="ui center aligned middle aligned segment">
-  <p> Sign up or Log in... </p>
+  
+  <h2>Welcome to the PlayStation Game Tracker App!</h2>
+
+  <p>
+    This fan-made app allows you to track your PlayStation 
+    games and see how you stack up against your 
+    friends. You can view your game collection and 
+    compare it with others. Whether you're a 
+    casual or dedicated gamer, this app is 
+    designed to enhance your gaming experience by allowing
+    you to save games you completed,
+    avoiding the question of "Have i played this game before?" 
+    Start tracking your games today by signing up and
+    entering your games into categories of your choice! 
+    Its that simple! Join us!
+  </p>
+
+</section>
+
+<section class="ui center aligned middle aligned segment">
+
+  <h2>Playstation Game Tracker Statistics</h2>
+
+  <h3 class="ui header">Global App Statistics</h3>
+    
+  <p>The Game Tracker App now contains in total:</p>
+  
+  {{#with globalStats}}
+  <div class="ui center aligned grid">
+
+    <div class="ui sixteen wide column">
+
+      <div class="ui centered four statistics">
+        <div class="ui statistic">
+          <div class="value">
+            <i class="database icon"></i>
+          </div>
+          <div class="label">
+            {{displayNumCollections}} collections
+          </div>
+        </div>
+
+        <div class="ui blue statistic">
+          <div class="value">
+            <i class="gamepad icon"></i>
+          </div>
+          <div class="label">
+            {{displayNumGames}} games
+          </div>
+        </div>
+
+        <div class="ui yellow statistic">
+          <div class="value">
+            <i class="trophy icon"></i>
+          </div>
+          <div class="label">
+            {{displayNumTrophies}} trophies
+          </div>
+        </div>
+
+        <div class="ui red statistic">
+          <div class="value">
+            <i class="percentage icon"></i>
+          </div>
+          <div class="label">
+            Average games per <br> collection: {{displayAverage}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/with}}
+</section>
+
+<section class="ui center aligned middle aligned segment">
+  <p>Sign up or Log in to continue.</p>
 </section>

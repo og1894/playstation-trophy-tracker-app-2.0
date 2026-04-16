@@ -1,11 +1,61 @@
 {{> menu id="about"}}
 
-<section class="ui left aligned middle aligned segment">
-    <h2>User Statistics</h2>
+<section class="ui center aligned middle aligned segment">
+
+  <h2>Playstation Game Tracker Statistics</h2>
+
+  <h3 class="ui header">Global App Statistics</h3>
+    
+  <p>The Game Tracker App now contains in total:</p>
+  
+  {{#with globalStats}}
+  <div class="ui center aligned grid">
+
+    <div class="ui sixteen wide column">
+
+      <div class="ui centered four statistics">
+        <div class="ui statistic">
+          <div class="value">
+            <i class="database icon"></i>
+          </div>
+          <div class="label">
+            {{displayNumCollections}} collections
+          </div>
+        </div>
+
+        <div class="ui blue statistic">
+          <div class="value">
+            <i class="gamepad icon"></i>
+          </div>
+          <div class="label">
+            {{displayNumGames}} games
+          </div>
+        </div>
+
+        <div class="ui yellow statistic">
+          <div class="value">
+            <i class="trophy icon"></i>
+          </div>
+          <div class="label">
+            {{displayNumTrophies}} trophies
+          </div>
+        </div>
+
+        <div class="ui red statistic">
+          <div class="value">
+            <i class="percentage icon"></i>
+          </div>
+          <div class="label">
+            Average games per <br> collection: {{displayAverage}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/with}}
 </section>
 
-
-<section class="ui middle aligned segment">
+<section class="ui center aligned segment">
     <h2>About the Authors</h2>
 
   <section class="ui left aligned segment">

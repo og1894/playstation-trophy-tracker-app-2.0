@@ -2,13 +2,32 @@
 
 import logger from '../utils/logger.js';
 import userStore from '../models/user-store.js';
+import collectionStore from '../models/collection-store.js';
 import { v4 as uuidv4 } from 'uuid';
 
 const accounts = {
 
   index(request, response) {
+    const allCollections = collectionStore.getAllCollections();
+    const globalNumCollections = allCollections.length;
+    const globalNumGames = allCollections.reduce((total, collection) => total + collection.games.length, 0);
+    const globalAverage = globalNumCollections > 0 ? (globalNumGames / globalNumCollections).toFixed(2) : 0;
+    const globalNumTrophies = allCollections.reduce((collectionTotal, collection) => {
+      return collectionTotal + collection.games.reduce((gameTotal, game) => {
+        return gameTotal + parseInt(game.trophies || 0, 10);
+      }, 0);
+    }, 0);
+
+    const globalStatistics = {
+      displayNumCollections: globalNumCollections,
+      displayNumGames: globalNumGames,
+      displayAverage: globalAverage,
+      displayNumTrophies: globalNumTrophies,
+    };
+
     const viewData = {
       title: 'Login or Signup',
+      globalStats: globalStatistics,
     };
     response.render('index', viewData);
   },

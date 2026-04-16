@@ -1,37 +1,27 @@
 {{> menu}}
 
 <section class="ui center aligned middle aligned segment">
-  
-  <h2>Welcome to the PlayStation Game Tracker App!</h2>
+  <h2>PlayStation Game Tracker App Guide</h2>
 
   <p>
-    This fan-made app allows you to track your PlayStation 
-    games and see how you stack up against your 
-    friends. You can view your game collection and 
-    compare it with others. Whether you're a 
-    casual or dedicated gamer, this app is 
-    designed to enhance your gaming experience by allowing
-    you to save games you completed and 
-    let you discover more similar ones to your taste, while
-    avoiding the question of "Have i played this game before?" 
-    Start tracking your games today by signing up and
-    entering your games into categories of your choice! 
-    Its that simple!
+    Thank you for using the PlayStation Game Tracker App! 
+    On the Start page which you are on you can see your app usage
+    statistics. The Dashboard page allows you add/delete your collections, 
+    inside which you can add games by entering their title, 
+    platform and amount of trophies. If you make a mistake or want to 
+    remove a game you can also remove and edit games inside 
+    collections. The About page describes our story of how we made tha app
+    as well as the global statistics including data from all our users. If you
+    encounter any issues or have a question or suggestion we would be
+    delighted to know! Please dont hesitate to contacts us! For more details visit
+    the about page.
   </p>
-
 </section>
 
 <section class="ui center aligned middle aligned segment">
+  <h2>Your Statistics</h2>
 
-  <h2>Playstation Game Tracker Statistics</h2>
-
-  <h3 class="ui header">
-    App Statistics
-  </h3>
-  <p>
-    The Game Tracker App now contains:
-  </p>
-  {{#with stats}}
+  {{#with userStats}}
   <div class="ui center aligned grid">
 
     <div class="ui sixteen wide column">
@@ -72,12 +62,9 @@
             Average games per <br> collection: {{displayAverage}}
           </div>
         </div>
-
       </div>
     </div>
-    
   </div>
-
   {{/with}}
-
+    
 </section>

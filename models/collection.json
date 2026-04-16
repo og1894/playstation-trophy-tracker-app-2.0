@@ -2,45 +2,51 @@
   "gamesCollection": [
     {
       "userid": "73b86da3-ea15-4795-8c93-e6d03c60cb6b",
-      "id": "20c93f84-4402-4349-8916-bdc16b4cae15",
-      "title": "Adventure",
+      "id": "47c641ba-20af-4860-948e-6711946f9410",
+      "title": "hhh",
       "games": [
         {
-          "id": "8b109191-9564-4639-a573-52d2e3a098be",
-          "title": "Uncharted 4",
-          "platform": "PS4",
-          "trophies": "20"
-        }
-      ],
-      "date": "2026-04-16T11:38:57.803Z"
-    },
-    {
-      "userid": "73b86da3-ea15-4795-8c93-e6d03c60cb6b",
-      "id": "2762cdcc-bddf-4c7f-b12f-a8749deffe07",
-      "title": "Simulators",
-      "games": [
-        {
-          "id": "51b30c41-888b-42cd-9fad-a607dc35c2b0",
-          "title": "Farming Simulator 22",
-          "platform": "PS5",
+          "id": "438e7dc4-cc05-42b5-9031-814b925f9987",
+          "title": "h",
+          "platform": "h",
           "trophies": "13"
+        },
+        {
+          "id": "15d591ea-478d-4dc0-a087-a23085712095",
+          "title": "hh",
+          "platform": "hh",
+          "trophies": "26"
         }
       ],
-      "date": "2026-04-16T11:39:30.348Z"
+      "date": "2026-04-16T17:23:23.124Z"
     },
     {
       "userid": "73b86da3-ea15-4795-8c93-e6d03c60cb6b",
-      "id": "050b3c7e-5a09-466a-961d-f0a90e88e61e",
-      "title": "Action",
+      "id": "37854a95-40c0-4381-be9d-d63fe7a6d9fa",
+      "title": "h",
       "games": [
         {
-          "id": "f820a9bb-7b1d-402a-9f41-1519b85cce43",
-          "title": "Call of Duty",
-          "platform": "PS4",
-          "trophies": "38"
+          "id": "cfcb70df-3232-47b8-b1ef-57a7448bd9ad",
+          "title": "hhh",
+          "platform": "hhh",
+          "trophies": "39"
         }
       ],
-      "date": "2026-04-16T11:40:54.891Z"
+      "date": "2026-04-16T17:23:48.145Z"
+    },
+    {
+      "userid": "fc006949-6787-43ec-a8f9-913fde813a87",
+      "id": "caf62084-ef6b-4dee-8835-09c31fa41488",
+      "title": "jjj",
+      "games": [
+        {
+          "id": "ac450963-d901-4b6e-bd7f-e44a5e798cac",
+          "title": "j",
+          "platform": "j",
+          "trophies": "7"
+        }
+      ],
+      "date": "2026-04-16T17:24:36.745Z"
     }
   ]
 }

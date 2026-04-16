@@ -10,30 +10,29 @@ const start = {
     const loggedInUser = accounts.getCurrentUser(request);
     logger.info("Start page loading!");
 
-
     if (loggedInUser) {
-      const collections = collectionStore.getAllCollections();
-      const numCollections = collections.length;
-      const numGames = collections.reduce((total, collection) => total + collection.games.length, 0);
-      const average = numCollections > 0 ? (numGames / numCollections).toFixed(2) : 0;
-      const numTrophies = collections.reduce((collectionTotal, collection) => {
+
+      const userCollections = collectionStore.getUserCollections(loggedInUser.id);
+      const userNumCollections = userCollections.length;
+      const userNumGames = userCollections.reduce((total, collection) => total + collection.games.length, 0);
+      const userAverage = userNumCollections > 0 ? (userNumGames / userNumCollections).toFixed(2) : 0;
+      const userNumTrophies = userCollections.reduce((collectionTotal, collection) => {
         return collectionTotal + collection.games.reduce((gameTotal, game) => {
           return gameTotal + parseInt(game.trophies || 0, 10);
         }, 0);
       }, 0);
-    
-      const statistics = {
-        displayNumCollections: numCollections,
-        displayNumGames: numGames,
-        displayAverage: average,
-        displayNumTrophies: numTrophies,
+
+      const userStatistics = {
+        displayNumCollections: userNumCollections,
+        displayNumGames: userNumGames,
+        displayAverage: userAverage,
+        displayNumTrophies: userNumTrophies,
       };
-    
-    
+      
       const viewData = {
         title: "PlayStation Game Tracker App",
         info: appStore.getAppInfo(),
-        stats: statistics,
+        userStats: userStatistics,
         fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
       };
       response.render('start', viewData);
