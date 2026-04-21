@@ -20,7 +20,7 @@ const collection = {
     response.render('collection', viewData);
   },
 
-  addGame(request, response) {
+  async addGame(request, response) {
     const collectionId = request.params.id;
     const collection = collectionStore.getCollection(collectionId);
     const newGame = {
@@ -30,19 +30,21 @@ const collection = {
       trophies: request.body.trophies,
     };
 
-    collectionStore.addGame(collectionId, newGame);
-    response.redirect('/collection/' + collectionId);
+    collectionStore.addGame(collectionId, newGame, request.files?.picture, function() {
+      response.redirect('/collection/' + collectionId);
+    });
   },
 
   deleteGame(request, response) {
     const collectionId = request.params.id;
     const gameId = request.params.gameid;
-    logger.debug(`Deleting Game  $(gameId} from Collection ${collectionId}`);
-    collectionStore.removeGame(collectionId, gameId);
-    response.redirect('/collection/' + collectionId);
+    logger.debug(`Deleting Game ${gameId} from Collection ${collectionId}`);
+    collectionStore.removeGame(collectionId, gameId, function() {
+      response.redirect('/collection/' + collectionId);
+    });
   },
 
-  updateGame(request, response) {
+  async updateGame(request, response) {
     const collectionId = request.params.id;
     const gameId = request.params.gameid;
     logger.debug("updating game " + gameId);
@@ -53,8 +55,9 @@ const collection = {
       trophies: request.body.trophies,
     };
 
-    collectionStore.editGame(collectionId, gameId, updatedGame);
-    response.redirect('/collection/' + collectionId);
+    collectionStore.editGame(collectionId, gameId, updatedGame, request.files?.picture, function() {
+      response.redirect('/collection/' + collectionId);
+    });
   },
 };
 

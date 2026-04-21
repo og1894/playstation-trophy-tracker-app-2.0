@@ -17,16 +17,39 @@ const collectionStore = {
     return this.store.findOneBy(this.collection, (collection => collection.id === id));
 },
 
-addGame(id, game) {
-    this.store.addItem(this.collection, id, this.array, game);
+async addGame(id, game, file, response) {
+    try {
+      if (file) {
+        game.picture = await this.store.addToCloudinary(file);
+      }
+      this.store.addItem(this.collection, id, this.array, game);
+      response();
+    } catch (error) {
+      logger.error("Error processing game:", error);
+      response(error);
+    }
 },
 
 addCollectionItem(newCollection) {
     this.store.addCollection(this.collection, newCollection);
 },
 
-removeGame(id, gameId) {
-    this.store.removeItem(this.collection, id, this.array, gameId);
+async removeGame(id, gameId, response) {
+    try {
+      const collection = this.getCollection(id);
+      const game = collection.games.find(g => g.id === gameId);
+      
+      if (game && game.picture && game.picture.public_id) {
+        await this.store.deleteFromCloudinary(game.picture.public_id);
+        logger.info("Game image deleted from Cloudinary");
+      }
+      
+      this.store.removeItem(this.collection, id, this.array, gameId);
+      if (response) response();
+    } catch (error) {
+      logger.error("Error deleting game:", error);
+      if (response) response(error);
+    }
 },
 
 async addCollection(collection, file, response) {
@@ -56,8 +79,17 @@ async removeCollection(id, response) {
     response();
   },
 
-editGame(id, gameId, updatedGame) {
-    this.store.editItem(this.collection, id, gameId, this.array, updatedGame);
+async editGame(id, gameId, updatedGame, file, response) {
+    try {
+      if (file) {
+        updatedGame.picture = await this.store.addToCloudinary(file);
+      }
+      this.store.editItem(this.collection, id, gameId, this.array, updatedGame);
+      response();
+    } catch (error) {
+      logger.error("Error processing game update:", error);
+      response(error);
+    }
 },
 
 searchCollection(search) {

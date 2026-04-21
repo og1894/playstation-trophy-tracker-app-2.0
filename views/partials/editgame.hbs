@@ -1,5 +1,5 @@
 <div class="content hide" id="edit{{@index}}">
-  <form class="ui form" method="POST" action="/collection/{{collectionId}}/updategame/{{id}}">
+  <form class="ui form" method="POST" action="/collection/{{collectionId}}/updategame/{{id}}" enctype="multipart/form-data">
 
     <div class="field">
       <label>Title</label>
@@ -20,6 +20,11 @@
       <input type="number" name="trophies" required
         title="Please include a valid number of trophies"
         placeholder="Trophies" value="{{trophies}}">
+    </div>
+
+    <div class="field">
+      <label>Game Image</label>
+      <input type="file" name="picture" accept="image/*">
     </div>
 
     <div class="ui two buttons">

@@ -1,40 +1,6 @@
 {
   "gamesCollection": [
     {
-      "userid": "73b86da3-ea15-4795-8c93-e6d03c60cb6b",
-      "id": "47c641ba-20af-4860-948e-6711946f9410",
-      "title": "hhh",
-      "games": [
-        {
-          "id": "438e7dc4-cc05-42b5-9031-814b925f9987",
-          "title": "h",
-          "platform": "h",
-          "trophies": "13"
-        },
-        {
-          "id": "15d591ea-478d-4dc0-a087-a23085712095",
-          "title": "hh",
-          "platform": "hh",
-          "trophies": "26"
-        }
-      ],
-      "date": "2026-04-16T17:23:23.124Z"
-    },
-    {
-      "userid": "73b86da3-ea15-4795-8c93-e6d03c60cb6b",
-      "id": "37854a95-40c0-4381-be9d-d63fe7a6d9fa",
-      "title": "h",
-      "games": [
-        {
-          "id": "cfcb70df-3232-47b8-b1ef-57a7448bd9ad",
-          "title": "hhh",
-          "platform": "hhh",
-          "trophies": "39"
-        }
-      ],
-      "date": "2026-04-16T17:23:48.145Z"
-    },
-    {
       "userid": "fc006949-6787-43ec-a8f9-913fde813a87",
       "id": "caf62084-ef6b-4dee-8835-09c31fa41488",
       "title": "jjj",
@@ -49,14 +15,14 @@
       "date": "2026-04-16T17:24:36.745Z"
     },
     {
-      "id": "458171ed-dec6-4431-967d-ba9e036b4e20",
+      "id": "d17d7ca2-9563-4c07-933c-dfeb3e67b251",
       "userid": "73b86da3-ea15-4795-8c93-e6d03c60cb6b",
-      "title": "k",
+      "title": "j",
       "games": [],
-      "date": "2026-04-21T10:12:28.348Z",
+      "date": "2026-04-21T10:36:11.306Z",
       "picture": {
-        "url": "http://res.cloudinary.com/daemzlfi2/image/upload/v1776766349/nsnkbrydjhpsi2ujmbxb.png",
-        "public_id": "nsnkbrydjhpsi2ujmbxb"
+        "url": "http://res.cloudinary.com/daemzlfi2/image/upload/v1776767772/bcagkzgqour4jdehrdsb.png",
+        "public_id": "bcagkzgqour4jdehrdsb"
       }
     }
   ]
