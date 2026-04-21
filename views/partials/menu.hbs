@@ -2,7 +2,13 @@
   <header class="ui header item"> <a href="/start">Playstation Game Tracker App</a></header>
 
   <div class="right menu">
+    
     <span class="name">{{fullname}}</span>
+
+    {{#if picture}}
+      <img src="{{picture.url}}" alt="{{fullname}}" style="height: 40px; border-radius: 50%; margin-right: 10px; object-fit: cover;">
+    {{/if}}
+    
     <a id="dashboard" class="item" href="/dashboard">Dashboard</a>
     <a id="about" class="item" href="/about">About</a>
     <a id="logout" class="item" href="/logout">Log Out</a>

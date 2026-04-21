@@ -15,6 +15,7 @@ const collection = {
       title: 'Collection',
       singleCollection: collectionStore.getCollection(collectionId),
       fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
+      picture: loggedInUser.picture,
     };
 
     response.render('collection', viewData);

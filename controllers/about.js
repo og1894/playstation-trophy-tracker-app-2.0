@@ -32,6 +32,7 @@ const about = {
       const viewData = {
         title: 'About the Playlist App',
         fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
+        picture: loggedInUser.picture,
         aboutInfo: aboutStore.getAboutInfo(),
         globalStats: globalStatistics,
       };

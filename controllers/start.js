@@ -34,6 +34,7 @@ const start = {
         info: appStore.getAppInfo(),
         userStats: userStatistics,
         fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
+        picture: loggedInUser.picture,
       };
       response.render('start', viewData);
     }

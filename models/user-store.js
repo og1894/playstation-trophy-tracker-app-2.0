@@ -24,6 +24,19 @@ const userStore = {
     this.store.addCollection(this.collection, user);
   },
 
+  async addUserWithPicture(user, file, response) {
+    try {
+      if (file) {
+        user.picture = await this.store.addToCloudinary(file);
+      }
+      this.store.addCollection(this.collection, user);
+      response();
+    } catch (error) {
+      logger.error("Error processing user registration:", error);
+      response(error);
+    }
+  },
+
 };
 
 export default userStore;

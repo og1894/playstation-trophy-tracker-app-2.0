@@ -42,6 +42,7 @@ const dashboard = {
       const viewData = {
         title: "Game Tracker App Dashboard",
         fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
+        picture: loggedInUser.picture,
         collections: sortField ? sorted : collections,
         search: searchTerm,
         titleSelected: request.query.sort === "title",
