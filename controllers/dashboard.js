@@ -59,27 +59,28 @@ const dashboard = {
 
   addCollection(request, response) {
     const loggedInUser = accounts.getCurrentUser(request);
-    logger.debug(loggedInUser.id);
     const timestamp = new Date();
     
     const newCollection = {
-      userid: loggedInUser.id,
       id: uuidv4(),
+      userid: loggedInUser.id,
       title: request.body.title,
       games: [],
       date: timestamp
     };
 
-    collectionStore.addCollectionItem(newCollection);
-    response.redirect('/dashboard');
+    collectionStore.addCollection(newCollection, request.files.picture, function() {
+        response.redirect("/dashboard");
+    });
   },
 
   deleteCollection(request, response) {
     const collectionId = request.params.id;
     logger.debug(`Deleting Collection ${collectionId}`);
-    collectionStore.removeCollection(collectionId);
-    response.redirect('/dashboard');
-  },
+    collectionStore.removeCollection(collectionId, function(){
+      response.redirect("/dashboard");
+    });
+  },      
 }
 
 export default dashboard;

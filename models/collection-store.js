@@ -29,10 +29,32 @@ removeGame(id, gameId) {
     this.store.removeItem(this.collection, id, this.array, gameId);
 },
 
-removeCollection(id) {
-    const collection = this.getCollection(id);
-    this.store.removeCollection(this.collection, collection);
+async addCollection(collection, file, response) {
+  try {
+    collection.picture = await this.store.addToCloudinary(file);
+    this.store.addCollection(this.collection, collection);
+    response();
+  } catch (error) {
+    logger.error("Error processing collection:", error);
+    response(error);
+  }
 },
+
+async removeCollection(id, response) {
+  const collection = this.getCollection(id);
+
+  if (collection.picture && collection.picture.public_id) {
+    try {
+      await this.store.deleteFromCloudinary(collection.picture.public_id);
+      logger.info("Cloudinary image deleted");
+    } catch (err) {
+      logger.error("Failed to delete Cloudinary image:", err);
+    }
+  }
+
+    this.store.removeCollection(this.collection, collection);
+    response();
+  },
 
 editGame(id, gameId, updatedGame) {
     this.store.editItem(this.collection, id, gameId, this.array, updatedGame);
