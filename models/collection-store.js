@@ -39,11 +39,6 @@ async removeGame(id, gameId, response) {
       const collection = this.getCollection(id);
       const game = collection.games.find(g => g.id === gameId);
       
-      if (game && game.picture && game.picture.public_id) {
-        await this.store.deleteFromCloudinary(game.picture.public_id);
-        logger.info("Game image deleted from Cloudinary");
-      }
-      
       this.store.removeItem(this.collection, id, this.array, gameId);
       if (response) response();
     } catch (error) {

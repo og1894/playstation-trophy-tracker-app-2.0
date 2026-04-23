@@ -38,7 +38,11 @@ const collection = {
 
   deleteGame(request, response) {
     const collectionId = request.params.id;
+    logger.info(collectionId);
+    
     const gameId = request.params.gameid;
+    logger.info(gameId);
+    
     logger.debug(`Deleting Game ${gameId} from Collection ${collectionId}`);
     collectionStore.removeGame(collectionId, gameId, function() {
       response.redirect('/collection/' + collectionId);
